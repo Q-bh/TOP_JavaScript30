@@ -38,7 +38,14 @@
     // Find the comment with this ID
     // delete the comment with the ID of 823423
     const index = comments.findIndex(comment => comment.id === 823423);
+
     comments.splice(index, 1);
+    // OR
+    const newComments = [
+      ...comments.slice(0, index), // ... = spread operator. Copies part of an existing array to another array
+      ...comments.slice(index + 1)
+    ]
+
   </script>
 </body>
 </html>
